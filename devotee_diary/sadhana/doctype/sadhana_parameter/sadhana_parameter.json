@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:name1",
+ "creation": "2023-10-12 16:46:24.565080",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "active",
+  "name1",
+  "grades",
+  "sick_allowed",
+  "authorised_service_allowed",
+  "priority",
+  "day_maximum"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "grades",
+   "fieldtype": "Table",
+   "label": "Grades",
+   "options": "Sadhana Parameter Detail"
+  },
+  {
+   "default": "0",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "default": "0",
+   "fieldname": "sick_allowed",
+   "fieldtype": "Check",
+   "label": "Sick Allowed"
+  },
+  {
+   "default": "0",
+   "fieldname": "authorised_service_allowed",
+   "fieldtype": "Check",
+   "label": "Authorised Service Allowed"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Priority"
+  },
+  {
+   "description": "This will restrict to floor the data back to ensure no contribution to other parameters.\nEx. 7 Days reading, if results in 8.5 due to grade (A+), it has to be considered in a week to be maximum 7.",
+   "fieldname": "day_maximum",
+   "fieldtype": "Float",
+   "label": "Day Maximum",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-01 17:18:05.982632",
+ "modified_by": "Administrator",
+ "module": "Sadhana",
+ "name": "Sadhana Parameter",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "DED User",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "DED Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
