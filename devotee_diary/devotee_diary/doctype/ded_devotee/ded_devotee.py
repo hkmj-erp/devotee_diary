@@ -53,3 +53,37 @@ class DEDDevotee(NestedSet):
 #                     "User {0} doesn't have any primary Devotee. Check Primary at Row {1} for this User."
 #                 ).format(au.user, au.idx)
 #             )
+
+
+@frappe.whitelist()
+def get_children(doctype, parent, is_root=False):
+
+    filters = [["enabled", "=", "1"]]
+
+    if parent and not is_root:
+        # via expand child
+        filters.append(["parent_ded_devotee", "=", parent])
+    else:
+        filters.append(['ifnull(`parent_ded_devotee`, "")', "=", ""])
+
+    types = frappe.get_list(
+        doctype,
+        fields=["name as value", "full_name as title", "is_group as expandable"],
+        filters=filters,
+        order_by="name",
+    )
+
+    return types
+
+
+@frappe.whitelist()
+def add_node():
+    from frappe.desk.treeview import make_tree_args
+
+    args = frappe.form_dict
+    args = make_tree_args(**args)
+
+    if args.parent_ded_devotee == "All Types":
+        args.parent_ded_devotee = None
+
+    frappe.get_doc(args).insert()
