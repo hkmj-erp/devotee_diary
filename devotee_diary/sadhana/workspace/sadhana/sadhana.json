@@ -66,7 +66,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Reports",
-   "link_count": 1,
+   "link_count": 3,
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -80,14 +80,34 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sadhana Day Report",
+   "link_count": 0,
+   "link_to": "Sadhana Day Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sadhana Week Report",
+   "link_count": 0,
+   "link_to": "Sadhana Week Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2024-03-27 20:11:40.802269",
- "modified_by": "nrhd@hkm-group.org",
+ "modified": "2024-04-28 23:55:32.754363",
+ "modified_by": "Administrator",
  "module": "Sadhana",
  "name": "Sadhana",
  "number_cards": [],
- "owner": "nrhd@hkm-group.org",
+ "owner": "nrhd@hkmjaipur.org",
  "parent_page": "HKM",
  "public": 1,
  "quick_lists": [],

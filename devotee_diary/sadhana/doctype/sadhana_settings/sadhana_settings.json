@@ -37,7 +37,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-04-03 13:34:40.210176",
+ "modified": "2024-04-28 21:35:52.798378",
  "modified_by": "Administrator",
  "module": "Sadhana",
  "name": "Sadhana Settings",
@@ -73,5 +73,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

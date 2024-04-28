@@ -24,9 +24,6 @@ def execute(filters=None):
     devotee_data = {}
 
     for d in frappe.get_all("DED Devotee", fields=["name", "full_name"]):
-        # if d not in devotee_data:
-        #     devotee_data.setdefault(d, {"devotee": d})
-        # if entry["devotee"] not in devotee_data:
         devotee_data.setdefault(
             d["name"], {"devotee": d["full_name"], "sick": 0, "total": 0}
         )
@@ -61,9 +58,9 @@ def execute(filters=None):
             if d[p] > total_days:
                 d[p] = total_days
             d["total"] += d[p]
-        d["percentage"] = round((
-            d["total"] / (total_days * parameter_count - d["sick"])
-        ) * 100)
+        d["percentage"] = round(
+            (d["total"] / (total_days * parameter_count - d["sick"])) * 100
+        )
     data = sorted(data, key=lambda x: x["devotee"])
     # columns, data = [], []
     return columns, data
