@@ -93,7 +93,7 @@
   },
   {
    "hidden": 0,
-   "is_query_report": 0,
+   "is_query_report": 1,
    "label": "Sadhana Week Report",
    "link_count": 0,
    "link_to": "Sadhana Week Report",
@@ -102,7 +102,7 @@
    "type": "Link"
   }
  ],
- "modified": "2024-04-28 23:55:32.754363",
+ "modified": "2024-04-29 09:56:33.516719",
  "modified_by": "Administrator",
  "module": "Sadhana",
  "name": "Sadhana",

@@ -74,7 +74,19 @@ def execute(filters=None):
                 value[dw["start_date"]] = 100
             value["total"] += value[dw["start_date"]]
         value["total"] = round(value["total"] / len(dates_week))
-    data = sorted(list(devotee_data.values()), key=lambda x: x["total"], reverse=True)
+
+    levels = [90, 80, 70, 60, -1]
+    lindex = 0
+
+    data = []
+    upper = 100
+    for ind, l in enumerate(levels):
+        lower = l
+        data.append({"devotee": f"<b>{lower+1}% - {upper}%</b>"})
+        filtered = [d for d in devotee_data.values() if lower < d["total"] <= upper]
+        data.extend(sorted(filtered, key=lambda x: x["total"], reverse=True))
+        upper = l
+
     return columns, data
 
 
@@ -112,17 +124,19 @@ def get_columns(dates_week):
             "label": "Devotee",
             "fieldname": "devotee",
             "fieldtype": "Data",
-            "width": 120,
+            "width": 150,
         },
     ]
 
     for dw in dates_week:
+        start_date = datetime.strptime(dw["start_date"], "%Y-%m-%d").strftime("%d %b")
+        end_date = datetime.strptime(dw["end_date"], "%Y-%m-%d").strftime("%d %b")
         columns.append(
             {
-                "label": f"W{dw['week_number']}",
+                "label": f"{start_date} - {end_date}",
                 "fieldname": dw["start_date"],
                 "fieldtype": "Percent",
-                "width": 120,
+                "width": 150,
             }
         )
     columns.append(
