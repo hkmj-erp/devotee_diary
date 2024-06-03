@@ -9,7 +9,10 @@
  "field_order": [
   "firebase_admin_app",
   "sadhana_threshold_days",
-  "admin_role"
+  "admin_role",
+  "generate_public_link",
+  "public_link",
+  "public_key"
  ],
  "fields": [
   {
@@ -32,12 +35,30 @@
    "label": "Admin Role",
    "options": "Role",
    "reqd": 1
+  },
+  {
+   "fieldname": "generate_public_link",
+   "fieldtype": "Button",
+   "label": "Generate/Reset Public Link"
+  },
+  {
+   "fieldname": "public_link",
+   "fieldtype": "Data",
+   "label": "Public Link",
+   "read_only": 1
+  },
+  {
+   "fieldname": "public_key",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Public Key",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-04-28 21:35:52.798378",
+ "modified": "2024-06-03 11:20:12.342088",
  "modified_by": "Administrator",
  "module": "Sadhana",
  "name": "Sadhana Settings",

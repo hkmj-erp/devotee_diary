@@ -5,14 +5,15 @@ from datetime import datetime
 
 
 @frappe.whitelist()
-def get_cummulative_sadhana(from_date, to_date):
+def get_cummulative_sadhana(from_date, to_date, parent_devotee=None):
 
     parameters = frappe.get_all(
-        "Sadhana Parameter", filters={"active": 1}, pluck="name"
+        "Sadhana Parameter", filters={"active": 1}, pluck="name",order_by="priority"
     )
 
     devotee_data = {}
-    parent_devotee = get_devotee_from_user()
+    if not parent_devotee:
+        parent_devotee = get_devotee_from_user()
     dcs_devotees = get_descendants_of(
         "DED Devotee", parent_devotee, ignore_permissions=True
     )
