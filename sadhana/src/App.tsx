@@ -8,13 +8,14 @@ import {
 } from "react-router-dom";
 
 import { Box } from "@chakra-ui/react";
+import SadhanaAdmin from "./components/SadhanaAdmin";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
         <Route path="/" lazy={() => import("./components/Welcome")} />
-		<Route path="/admin" lazy={() => import("./components/Welcome")} />
+        <Route path="/admin" element={<SadhanaAdmin />} />
         {/* <Route path="/success" lazy={() => import("./components/success")} />
 				<Route path="/window/:id" element={<IssueWindow />} />
 				<Route path="/find_coupons" element={<FindCoupons />} /> */}
