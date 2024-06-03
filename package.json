@@ -1,0 +1,21 @@
+{
+  "name": "devotee_diary",
+  "version": "1.0.0",
+  "description": "Maintains all round information of a Temple Devotee",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cd sadhana && yarn install",
+    "dev": "cd sadhana && yarn dev",
+    "build": "cd sadhana && yarn build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "framer-motion": "^11.2.10"
+  }
+}
