@@ -1,5 +1,3 @@
-import { SadhanaParameterData } from "./models";
-
 export const sadhanaGroupOptions = {
     columns: ["parent"],
 };

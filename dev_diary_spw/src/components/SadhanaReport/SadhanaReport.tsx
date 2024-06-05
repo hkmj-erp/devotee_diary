@@ -9,7 +9,7 @@ import {
     Resize,
     Sort,
 } from "@syncfusion/ej2-react-grids";
-import { Box, Card, CardHeader, Center, Spinner, Text } from "@chakra-ui/react";
+import { Box, Card, CardHeader, Spinner, Text } from "@chakra-ui/react";
 import { useFrappeGetCall } from "frappe-react-sdk";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -18,7 +18,7 @@ import { DateRange } from "rsuite/esm/DateRangePicker";
 import { SadhanaReportRow } from "./models";
 import { DevoteeTemplate, ParameterTemplate } from "./Templates";
 import { sadhanaGroupOptions, sadhanaSortComparer } from "./TableOptions";
-import { color } from "framer-motion";
+
 
 export const SadhanaReport = () => {
     let { public_key } = useParams();

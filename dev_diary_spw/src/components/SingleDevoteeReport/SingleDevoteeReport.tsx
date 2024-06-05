@@ -1,9 +1,9 @@
 import { useFrappeGetCall } from 'frappe-react-sdk';
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { DateRange } from 'rsuite/esm/DateRangePicker';
 import { SadhanaSingleEntry } from './models';
-import { Category, ChartComponent, DataLabel, DateTime, Inject, Legend, SeriesCollectionDirective, SeriesDirective, SplineSeries, Tooltip } from '@syncfusion/ej2-react-charts';
+import { ChartComponent, DataLabel, DateTime, Inject, Legend, SeriesCollectionDirective, SeriesDirective, SplineSeries, Tooltip } from '@syncfusion/ej2-react-charts';
 import { getMonthlyData } from './DataOperation';
 import { Box, Card, CardHeader } from '@chakra-ui/react';
 import { SadhanaReportFilters } from '../SadhanaReport/Filters';
@@ -89,7 +89,7 @@ export default function SingleDevoteeReport() {
                                     </ChartComponent>
                                     <Divider />
                                 </>
-                
+
                             )
                         }
                         )
