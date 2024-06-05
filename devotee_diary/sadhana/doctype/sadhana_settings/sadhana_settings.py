@@ -18,6 +18,6 @@ def generate_public_link():
     settings.public_key = random_string(15)
     site_name = cstr(frappe.local.site)
     settings.public_link = (
-        f"https://{site_name}/devotee_diary_spw/sadhana_report/{settings.public_key}"
+        f"https://{site_name}/dev_diary_spw/sadhana_public/{settings.public_key}"
     )
     settings.save()

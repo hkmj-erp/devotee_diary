@@ -110,6 +110,7 @@ def get_devotee_records(devotee, from_date, to_date):
             on ts.name = tsd.parent
             where entry_date between '{from_date}' and '{to_date}'
             and ts.devotee = '{devotee}'
+            order by entry_date
                 """,
         as_dict=1,
     )

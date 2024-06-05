@@ -229,4 +229,6 @@ scheduler_events = {
     # "cron": {"30 20 * * *": ["devotee_diary.tasks.sadhana_reminder_2"]},
 }
 
-website_route_rules = [{'from_route': '/sadhana/<path:app_path>', 'to_route': 'sadhana'},]
+website_route_rules = [
+    {"from_route": "/dev_diary_spw/<path:app_path>", "to_route": "dev_diary_spw"}
+]

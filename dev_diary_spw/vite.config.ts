@@ -16,7 +16,7 @@ export default defineConfig({
 		}
 	},
 	build: {
-		outDir: '../devotee_diary/public/sadhana',
+		outDir: '../devotee_diary/public/dev_diary_spw',
 		emptyOutDir: true,
 		target: 'es2015',
 	},

@@ -1,26 +1,41 @@
 {
-  "name": "sadhana",
+  "name": "dev_diary_spw",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/assets/devotee_diary/sadhana/ && yarn copy-html-entry",
+    "build": "vite build --base=/assets/devotee_diary/dev_diary_spw/ && yarn copy-html-entry",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "copy-html-entry": "cp ../devotee_diary/public/sadhana/index.html ../devotee_diary/www/sadhana.html"
+    "copy-html-entry": "cp ../devotee_diary/public/dev_diary_spw/index.html ../devotee_diary/www/dev_diary_spw.html"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@syncfusion/ej2-base": "^25.2.5",
+    "@syncfusion/ej2-react-calendars": "^25.2.5",
+    "@syncfusion/ej2-react-charts": "^25.2.6",
+    "@syncfusion/ej2-react-grids": "^25.2.6",
+    "@syncfusion/ej2-react-treegrid": "^25.2.6",
+    "@types/react-datepicker": "^6.2.0",
+    "ag-grid-react": "^31.3.2",
+    "bootstrap": "^5.3.3",
+    "date-fns": "^3.6.0",
     "framer-motion": "^11.2.10",
     "frappe-react-sdk": "^1.7.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.2",
+    "react-datepicker": "^6.9.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.23.1"
+    "react-router-dom": "^6.23.1",
+    "react-select": "^5.8.0",
+    "rsuite": "^5.64.0"
   },
   "devDependencies": {
+    "@types/node": "^20.14.0",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
