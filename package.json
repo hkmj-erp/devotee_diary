@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "cd devotee_diary_spw && yarn install",
-    "dev": "cd devotee_diary_spw && yarn dev",
-    "build": "cd devotee_diary_spw && yarn build"
+    "postinstall": "cd dev_diary_spw && yarn install",
+    "dev": "cd dev_diary_spw && yarn dev",
+    "build": "cd dev_diary_spw && yarn build"
   },
   "keywords": [],
   "author": "",
