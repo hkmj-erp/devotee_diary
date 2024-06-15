@@ -12,7 +12,9 @@
   "admin_role",
   "generate_public_link",
   "public_link",
-  "public_key"
+  "public_key",
+  "notification_channels_tab",
+  "sadhana_reminder_channel"
  ],
  "fields": [
   {
@@ -53,12 +55,23 @@
    "hidden": 1,
    "label": "Public Key",
    "read_only": 1
+  },
+  {
+   "fieldname": "notification_channels_tab",
+   "fieldtype": "Tab Break",
+   "label": "Notification Channels"
+  },
+  {
+   "fieldname": "sadhana_reminder_channel",
+   "fieldtype": "Link",
+   "label": "Sadhana Reminder Channel",
+   "options": "Notification Channel"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-06-03 11:20:12.342088",
+ "modified": "2024-06-15 16:28:25.941474",
  "modified_by": "Administrator",
  "module": "Sadhana",
  "name": "Sadhana Settings",

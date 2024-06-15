@@ -16,9 +16,7 @@ def sadhana_reminder(hour):
     devotees_done = frappe.get_all(
         "Sadhana Entry", filters={"entry_date": yesterday}, pluck="devotee"
     )
-
-    mobile_app = frappe.db.get_single_value("Sadhana Settings", "firebase_admin_app")
-
+    settings_doc = frappe.get_cached_doc("Sadhana Settings")
     message = ""
     if hour == 15:
         message = "You have not filled Sadhana for Yesterday. Please do."
@@ -33,7 +31,8 @@ def sadhana_reminder(hour):
         frappe.get_doc(
             {
                 "doctype": "App Notification",
-                "app": mobile_app,
+                "app": settings_doc.firebase_admin_app,
+                "channel": settings_doc.sadhana_reminder_channel,
                 "user": erp_user,
                 "subject": "Sadhana Reminder",
                 "message": message,
